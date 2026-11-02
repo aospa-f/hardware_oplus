@@ -105,7 +105,6 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
 
     private fun handleMode(position: Int, firstRun: Boolean) {
         val muteMedia = sharedPreferences.getBoolean(MUTE_MEDIA_WITH_SILENT, false)
-        val showDialog = sharedPreferences.getBoolean(SHOW_DIALOG, true)
 
         val mode =
             when (position) {
@@ -159,7 +158,6 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
             }
 
             if (!firstRun) {
-                if (showDialog) sendNotification(position, mode)
                 vibrateIfNeeded(mode)
             }
         }
