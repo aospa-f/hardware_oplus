@@ -231,3 +231,4 @@
 /dev/ufcs_dev                         u:object_r:wlchg_device:s0
 /dev/wlchg                            u:object_r:wlchg_device:s0
 /dev/wls_dev                          u:object_r:wlchg_device:s0
+/vendor/lib(64)?/libubwcp\.so u:object_r:same_process_hal_file:s0
